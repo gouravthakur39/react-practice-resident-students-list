@@ -1,6 +1,9 @@
-import React, { useState } from "react";
+import React, { Fragment, useState } from "react";
 import Error from "./Error";
 import ResidentsList from "./ResidentsList";
+import "h8k-components";
+import '../App.css'
+import '../index.css'
 
 // `joiningDate` && `validityDate` format "yyyy-mm-dd"
 
@@ -52,6 +55,7 @@ function Search(props) {
   };
 
   return (
+    <Fragment>
     <div className="my-50 layout-row align-items-end justify-content-end">
       <label htmlFor="studentName">
         Student Name:
@@ -86,9 +90,11 @@ function Search(props) {
       >
         Add
       </button>
-      <Error error={error} />
-      <ResidentsList validName={validName} />
+      
     </div>
+    {error && <Error error={error} />}
+    <ResidentsList validName={validName} />
+    </Fragment>
   );
 }
 

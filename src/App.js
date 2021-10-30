@@ -1,7 +1,8 @@
 import React from "react";
 import Search from "./Components/Search";
 import { STUDENTS } from "./Components/studentsList.js";
-
+import './index.css'
+import './App.css'
 import "h8k-components";
 
 const title = "Hacker Dormitory";
